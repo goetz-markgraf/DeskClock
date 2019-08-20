@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,45 +674,177 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="DeskClock" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="56" y="-14"/>
         </scene>
         <!--Window Controller-->
-        <scene sceneID="R2V-B0-nI4">
+        <scene sceneID="ETS-EM-yif">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                <windowController storyboardIdentifier="Clock Window Controller" id="cCm-NV-NRF" customClass="ClockWindowController" customModule="DeskClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" frameAutosaveName="ClockWindow" animationBehavior="default" titlebarAppearsTransparent="YES" id="ghb-Jm-BWq">
+                        <windowStyleMask key="styleMask" resizable="YES" texturedBackground="YES" fullSizeContentView="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" canJoinAllSpaces="YES" fullScreenNone="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="contentRect" x="555" y="608" width="176" height="99"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="3200" height="1777"/>
                         <connections>
-                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                            <outlet property="delegate" destination="cCm-NV-NRF" id="xXn-fV-7ze"/>
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <outlet property="window" destination="ghb-Jm-BWq" id="HrF-Gb-0pi"/>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="lit-wC-PML"/>
                     </connections>
                 </windowController>
-                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="H83-Ee-oKn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-77" y="116"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="Eh9-NU-sCo">
+            <objects>
+                <windowController id="ryT-wH-F6x" sceneMemberID="viewController">
+                    <window key="window" title="Einstellungen" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="sgo-h5-FMz">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="372" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1200"/>
+                        <connections>
+                            <outlet property="delegate" destination="ryT-wH-F6x" id="SHY-QK-iEc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="CGZ-W5-2W9" kind="relationship" relationship="window.shadowedContentViewController" id="oIo-Tl-uyO"/>
+                    </connections>
+                </windowController>
+                <customObject id="ofM-GK-In5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="501"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="za6-LF-5Z7">
+            <objects>
+                <viewController id="CGZ-W5-2W9" sceneMemberID="viewController">
+                    <view key="view" id="CvK-lu-Qba">
+                        <rect key="frame" x="0.0" y="0.0" width="456" height="101"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TY1-7W-Lws">
+                                <rect key="frame" x="92" y="64" width="84" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="RiL-sB-XRa"/>
+                                    <constraint firstAttribute="width" constant="80" id="pM8-47-c5f"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Schriftgröße:" id="wvs-u2-KMF">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b43-KJ-Gaw">
+                                <rect key="frame" x="202" y="63" width="52" height="18"/>
+                                <buttonCell key="cell" type="radio" title="Groß" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="3JP-lh-CEE">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="e6S-uJ-ME1" name="value" keyPath="fontSize" id="KSc-i6-vc7"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="moS-GT-qw5">
+                                <rect key="frame" x="280" y="63" width="52" height="18"/>
+                                <buttonCell key="cell" type="radio" title="Klein" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="eO2-cc-VrS">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="e6S-uJ-ME1" name="value" keyPath="fontSize" id="I7t-gf-aZT"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eUd-rr-w7K">
+                                <rect key="frame" x="201" y="26" width="105" height="18"/>
+                                <buttonCell key="cell" type="check" title="Mit Sekunden" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="rcq-TM-AWq">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="e6S-uJ-ME1" name="value" keyPath="withSeconds" id="7yH-c6-lOW">
+                                        <dictionary key="options">
+                                            <integer key="NSMultipleValuesPlaceholder" value="1"/>
+                                            <integer key="NSNoSelectionPlaceholder" value="0"/>
+                                            <integer key="NSNotApplicablePlaceholder" value="0"/>
+                                            <integer key="NSNullPlaceholder" value="0"/>
+                                            <bool key="NSValidatesImmediately" value="YES"/>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YmS-bC-75N">
+                                <rect key="frame" x="119" y="28" width="57" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="IBR-SY-sIz"/>
+                                    <constraint firstAttribute="width" constant="53" id="V5K-64-26i"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Anzeige:" id="AyU-TC-hhs">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="TY1-7W-Lws" firstAttribute="top" secondItem="CvK-lu-Qba" secondAttribute="top" constant="20" id="0Me-sD-C43"/>
+                            <constraint firstAttribute="trailing" secondItem="moS-GT-qw5" secondAttribute="trailing" constant="126" id="255-53-hFb"/>
+                            <constraint firstItem="b43-KJ-Gaw" firstAttribute="leading" secondItem="TY1-7W-Lws" secondAttribute="trailing" constant="29" id="3nJ-bw-ara"/>
+                            <constraint firstItem="moS-GT-qw5" firstAttribute="leading" secondItem="b43-KJ-Gaw" secondAttribute="trailing" constant="29" id="J95-YJ-t6s"/>
+                            <constraint firstItem="YmS-bC-75N" firstAttribute="top" secondItem="TY1-7W-Lws" secondAttribute="bottom" constant="19" id="KML-jw-ojg"/>
+                            <constraint firstItem="eUd-rr-w7K" firstAttribute="leading" secondItem="YmS-bC-75N" secondAttribute="trailing" constant="29" id="LNJ-D2-Bqc"/>
+                            <constraint firstAttribute="trailing" secondItem="eUd-rr-w7K" secondAttribute="trailing" constant="152" id="aWt-kI-M4Z"/>
+                            <constraint firstItem="b43-KJ-Gaw" firstAttribute="baseline" secondItem="moS-GT-qw5" secondAttribute="baseline" id="geR-7a-BXM"/>
+                            <constraint firstItem="b43-KJ-Gaw" firstAttribute="leading" secondItem="eUd-rr-w7K" secondAttribute="leading" id="gwS-Jm-g2A"/>
+                            <constraint firstItem="TY1-7W-Lws" firstAttribute="leading" secondItem="CvK-lu-Qba" secondAttribute="leading" constant="94" id="mUp-Qn-WdT"/>
+                            <constraint firstItem="b43-KJ-Gaw" firstAttribute="baseline" secondItem="TY1-7W-Lws" secondAttribute="baseline" id="udx-iO-GcC"/>
+                            <constraint firstItem="YmS-bC-75N" firstAttribute="bottom" secondItem="eUd-rr-w7K" secondAttribute="bottom" id="zzl-t1-xIv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="GQr-ew-WOE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="e6S-uJ-ME1"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="865.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="DeskClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="291" height="66"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="ZlD-sk-Njx" customClass="ClockView" customModule="DeskClock" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="291" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="o7t-nD-eWt"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZlD-sk-Njx" secondAttribute="bottom" id="0aI-yD-9K4"/>
+                            <constraint firstItem="ZlD-sk-Njx" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="jDp-yz-8py"/>
+                            <constraint firstItem="ZlD-sk-Njx" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="jky-9T-QdQ"/>
+                            <constraint firstAttribute="trailing" secondItem="ZlD-sk-Njx" secondAttribute="trailing" id="kzp-HS-Mip"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clockView" destination="ZlD-sk-Njx" id="EIg-dU-Z1A"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="286.5" y="209.5"/>
         </scene>
     </scenes>
 </document>

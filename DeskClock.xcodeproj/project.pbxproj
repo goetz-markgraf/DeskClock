@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D823675A227C45B900818EF9 /* ClockWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8236759227C45B900818EF9 /* ClockWindowController.swift */; };
 		D86C7838227C03E9003E649A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86C7837227C03E9003E649A /* AppDelegate.swift */; };
 		D86C783A227C03E9003E649A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86C7839227C03E9003E649A /* ViewController.swift */; };
-		D86C783C227C03EA003E649A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86C783B227C03EA003E649A /* Assets.xcassets */; };
 		D86C783F227C03EA003E649A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86C783D227C03EA003E649A /* Main.storyboard */; };
 		D86C784B227C03EA003E649A /* DeskClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86C784A227C03EA003E649A /* DeskClockTests.swift */; };
 		D86C7856227C03EA003E649A /* DeskClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86C7855227C03EA003E649A /* DeskClockUITests.swift */; };
+		D8AE7FC722805AE300D09F99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AE7FC622805AE300D09F99 /* Assets.xcassets */; };
+		D8BA30CF227E160F0033ECE6 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA30CE227E160F0033ECE6 /* ClockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8236759227C45B900818EF9 /* ClockWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockWindowController.swift; sourceTree = "<group>"; };
 		D86C7834227C03E9003E649A /* DeskClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeskClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C7837227C03E9003E649A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D86C7839227C03E9003E649A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D86C783B227C03EA003E649A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D86C783E227C03EA003E649A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D86C7840227C03EA003E649A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D86C7841227C03EA003E649A /* DeskClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeskClock.entitlements; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		D86C7851227C03EA003E649A /* DeskClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeskClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C7855227C03EA003E649A /* DeskClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskClockUITests.swift; sourceTree = "<group>"; };
 		D86C7857227C03EA003E649A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8AE7FC622805AE300D09F99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8BA30CE227E160F0033ECE6 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,9 @@
 			children = (
 				D86C7837227C03E9003E649A /* AppDelegate.swift */,
 				D86C7839227C03E9003E649A /* ViewController.swift */,
-				D86C783B227C03EA003E649A /* Assets.xcassets */,
+				D8236759227C45B900818EF9 /* ClockWindowController.swift */,
+				D8BA30CE227E160F0033ECE6 /* ClockView.swift */,
+				D8AE7FC622805AE300D09F99 /* Assets.xcassets */,
 				D86C783D227C03EA003E649A /* Main.storyboard */,
 				D86C7840227C03EA003E649A /* Info.plist */,
 				D86C7841227C03EA003E649A /* DeskClock.entitlements */,
@@ -228,7 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D86C783C227C03EA003E649A /* Assets.xcassets in Resources */,
+				D8AE7FC722805AE300D09F99 /* Assets.xcassets in Resources */,
 				D86C783F227C03EA003E649A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +261,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D86C783A227C03E9003E649A /* ViewController.swift in Sources */,
+				D8BA30CF227E160F0033ECE6 /* ClockView.swift in Sources */,
+				D823675A227C45B900818EF9 /* ClockWindowController.swift in Sources */,
 				D86C7838227C03E9003E649A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
