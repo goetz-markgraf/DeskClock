@@ -49,16 +49,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             windowController = nil
         }
     }
-    
-    // Zeigt das Preferences-Window an. Zuerst wird geprüft, ob das Fenster noch da ist. Wenn nicht,
-    // wird es neu erzeugt
-    @objc func preferences(_ sender: Any)
+
+    // Schaltet die Sekunden-Anzeige ein und aus
+    @objc func toggleSeconds(_ sender: Any)
     {
-        if (prefWindowController == nil)
+        if let win = windowController as! ClockWindowController?
         {
-            prefWindowController = newPrefWindow()
-        } else {
-            prefWindowController?.showWindow(nil)
+            win.toggleSeconds()
         }
     }
 
@@ -68,10 +65,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     {
         let menu = NSMenu()
         
-        menu.addItem(NSMenuItem(title: "Show", action: #selector(showClock(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Show", action: #selector(showClock(_:)), keyEquivalent: "s"))
         menu.addItem(NSMenuItem(title: "Hide", action: #selector(hideClock(_:)), keyEquivalent: "h"))
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Preferences", action: #selector(preferences(_:)), keyEquivalent: ","))
+        menu.addItem(NSMenuItem(title: "Toggle seconds", action: #selector(toggleSeconds(_:)), keyEquivalent: "t"))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
@@ -89,11 +86,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             fatalError("I cannot find my controller -> check Main.storyboard")
         }
         return windowController
-    }
-    
-    func newPrefWindow() -> NSWindowController
-    {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
     }
 }
 

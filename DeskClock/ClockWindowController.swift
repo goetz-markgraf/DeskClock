@@ -24,6 +24,11 @@ class ClockWindowController: NSWindowController
         NotificationCenter.default.addObserver(self, selector: #selector(windowWillClose(_:)), name: NSWindow.willCloseNotification, object: nil)
     }
 
+    func toggleSeconds() {
+        let vc = window?.contentViewController as? ViewController
+        vc?.toggleSeconds()
+    }
+
     // Beim öffnen hole ich die Fensterposition aus den UserDefaults
     override func awakeFromNib() {
         super.awakeFromNib()

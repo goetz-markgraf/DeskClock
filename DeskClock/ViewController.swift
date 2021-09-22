@@ -13,6 +13,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var clockView: ClockView!
     
     var timer: Timer?
+    var seconds = false
 
     // Zeigt initial die Zeit an und startet dann den Timer, der die Zeit aktualisiert
     override func viewDidAppear() {
@@ -31,6 +32,11 @@ class ViewController: NSViewController {
     {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { timer in self.displayTime() })
     }
+
+    func toggleSeconds()
+    {
+        seconds = !seconds
+    }
     
     // Hier wird der View für die Uhrzeit die neue Zeit alss
     // String übergeben
@@ -39,7 +45,11 @@ class ViewController: NSViewController {
         // get the current time
         let now = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss"
+        if (seconds) {
+            formatter.dateFormat = "HH:mm:ss"
+        } else {
+            formatter.dateFormat = "HH:mm"
+        }
         let nowString = formatter.string(from: now)
         clockView.stringValue = nowString
     }

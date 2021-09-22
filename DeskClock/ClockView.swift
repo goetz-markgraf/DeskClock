@@ -57,7 +57,7 @@ class ClockView: NSView
             // Und dann in der Akzentfarbe
             textAttributes = [
                 .font: actualFont,
-                .foregroundColor: NSColor.controlAccentColor,
+                .foregroundColor: NSColor.controlAccentColor /* selectedControlColor oder controlAccentColor */,
                 .paragraphStyle: textStyle
             ]
             

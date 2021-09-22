@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19162"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -319,14 +320,14 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Speech" id="3rS-ZA-NoH">
                                                 <items>
-                                                    <menuItem title="Start Speaking" id="Ynk-f8-cLZ">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    <menuItem title="Start Speaking" keyEquivalent="s" id="Ynk-f8-cLZ">
+                                                        <modifierMask key="keyEquivalentModifierMask" control="YES" option="YES"/>
                                                         <connections>
                                                             <action selector="startSpeaking:" target="Ady-hI-5gd" id="654-Ng-kyl"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Stop Speaking" id="Oyz-dy-DGm">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    <menuItem title="Stop Speaking" keyEquivalent="s" id="Oyz-dy-DGm">
+                                                        <modifierMask key="keyEquivalentModifierMask" shift="YES" control="YES" option="YES"/>
                                                         <connections>
                                                             <action selector="stopSpeaking:" target="Ady-hI-5gd" id="dX8-6p-jy9"/>
                                                         </connections>
@@ -617,7 +618,7 @@
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="hB3-LF-h0Y"/>
                                         <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
-                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                             <connections>
                                                 <action selector="toggleSidebar:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
                                             </connections>
@@ -635,7 +636,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
                                     <items>
-                                        <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                        <menuItem title="Minimize" keyEquivalent="" id="OY7-WF-poV">
                                             <connections>
                                                 <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
                                             </connections>
@@ -702,119 +703,6 @@
                 <customObject id="H83-Ee-oKn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-77" y="116"/>
-        </scene>
-        <!--Window Controller-->
-        <scene sceneID="Eh9-NU-sCo">
-            <objects>
-                <windowController id="ryT-wH-F6x" sceneMemberID="viewController">
-                    <window key="window" title="Einstellungen" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="sgo-h5-FMz">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="294" y="372" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1200"/>
-                        <connections>
-                            <outlet property="delegate" destination="ryT-wH-F6x" id="SHY-QK-iEc"/>
-                        </connections>
-                    </window>
-                    <connections>
-                        <segue destination="CGZ-W5-2W9" kind="relationship" relationship="window.shadowedContentViewController" id="oIo-Tl-uyO"/>
-                    </connections>
-                </windowController>
-                <customObject id="ofM-GK-In5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="61" y="501"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="za6-LF-5Z7">
-            <objects>
-                <viewController id="CGZ-W5-2W9" sceneMemberID="viewController">
-                    <view key="view" id="CvK-lu-Qba">
-                        <rect key="frame" x="0.0" y="0.0" width="456" height="101"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TY1-7W-Lws">
-                                <rect key="frame" x="92" y="64" width="84" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="RiL-sB-XRa"/>
-                                    <constraint firstAttribute="width" constant="80" id="pM8-47-c5f"/>
-                                </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Schriftgröße:" id="wvs-u2-KMF">
-                                    <font key="font" usesAppearanceFont="YES"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b43-KJ-Gaw">
-                                <rect key="frame" x="202" y="63" width="52" height="18"/>
-                                <buttonCell key="cell" type="radio" title="Groß" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="3JP-lh-CEE">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="e6S-uJ-ME1" name="value" keyPath="fontSize" id="KSc-i6-vc7"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="moS-GT-qw5">
-                                <rect key="frame" x="280" y="63" width="52" height="18"/>
-                                <buttonCell key="cell" type="radio" title="Klein" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="eO2-cc-VrS">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="e6S-uJ-ME1" name="value" keyPath="fontSize" id="I7t-gf-aZT"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eUd-rr-w7K">
-                                <rect key="frame" x="201" y="26" width="105" height="18"/>
-                                <buttonCell key="cell" type="check" title="Mit Sekunden" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="rcq-TM-AWq">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="e6S-uJ-ME1" name="value" keyPath="withSeconds" id="7yH-c6-lOW">
-                                        <dictionary key="options">
-                                            <integer key="NSMultipleValuesPlaceholder" value="1"/>
-                                            <integer key="NSNoSelectionPlaceholder" value="0"/>
-                                            <integer key="NSNotApplicablePlaceholder" value="0"/>
-                                            <integer key="NSNullPlaceholder" value="0"/>
-                                            <bool key="NSValidatesImmediately" value="YES"/>
-                                        </dictionary>
-                                    </binding>
-                                </connections>
-                            </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YmS-bC-75N">
-                                <rect key="frame" x="119" y="28" width="57" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="IBR-SY-sIz"/>
-                                    <constraint firstAttribute="width" constant="53" id="V5K-64-26i"/>
-                                </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Anzeige:" id="AyU-TC-hhs">
-                                    <font key="font" usesAppearanceFont="YES"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="TY1-7W-Lws" firstAttribute="top" secondItem="CvK-lu-Qba" secondAttribute="top" constant="20" id="0Me-sD-C43"/>
-                            <constraint firstAttribute="trailing" secondItem="moS-GT-qw5" secondAttribute="trailing" constant="126" id="255-53-hFb"/>
-                            <constraint firstItem="b43-KJ-Gaw" firstAttribute="leading" secondItem="TY1-7W-Lws" secondAttribute="trailing" constant="29" id="3nJ-bw-ara"/>
-                            <constraint firstItem="moS-GT-qw5" firstAttribute="leading" secondItem="b43-KJ-Gaw" secondAttribute="trailing" constant="29" id="J95-YJ-t6s"/>
-                            <constraint firstItem="YmS-bC-75N" firstAttribute="top" secondItem="TY1-7W-Lws" secondAttribute="bottom" constant="19" id="KML-jw-ojg"/>
-                            <constraint firstItem="eUd-rr-w7K" firstAttribute="leading" secondItem="YmS-bC-75N" secondAttribute="trailing" constant="29" id="LNJ-D2-Bqc"/>
-                            <constraint firstAttribute="trailing" secondItem="eUd-rr-w7K" secondAttribute="trailing" constant="152" id="aWt-kI-M4Z"/>
-                            <constraint firstItem="b43-KJ-Gaw" firstAttribute="baseline" secondItem="moS-GT-qw5" secondAttribute="baseline" id="geR-7a-BXM"/>
-                            <constraint firstItem="b43-KJ-Gaw" firstAttribute="leading" secondItem="eUd-rr-w7K" secondAttribute="leading" id="gwS-Jm-g2A"/>
-                            <constraint firstItem="TY1-7W-Lws" firstAttribute="leading" secondItem="CvK-lu-Qba" secondAttribute="leading" constant="94" id="mUp-Qn-WdT"/>
-                            <constraint firstItem="b43-KJ-Gaw" firstAttribute="baseline" secondItem="TY1-7W-Lws" secondAttribute="baseline" id="udx-iO-GcC"/>
-                            <constraint firstItem="YmS-bC-75N" firstAttribute="bottom" secondItem="eUd-rr-w7K" secondAttribute="bottom" id="zzl-t1-xIv"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <customObject id="GQr-ew-WOE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <userDefaultsController representsSharedInstance="YES" id="e6S-uJ-ME1"/>
-            </objects>
-            <point key="canvasLocation" x="49" y="865.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
