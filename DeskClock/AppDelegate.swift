@@ -49,6 +49,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             windowController = nil
         }
     }
+    
+    // Bringt das Fenster nach links unten
+    @objc func moveClockToZero(_ sender: Any) {
+        if let win = windowController
+        {
+            win.window?.setFrame(NSRect(x: 5, y: 5, width: 150, height: 40), display: true)
+           
+        }
+    }
 
     // Schaltet die Sekunden-Anzeige ein und aus
     @objc func toggleSeconds(_ sender: Any)
@@ -67,6 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         menu.addItem(NSMenuItem(title: "Show", action: #selector(showClock(_:)), keyEquivalent: "s"))
         menu.addItem(NSMenuItem(title: "Hide", action: #selector(hideClock(_:)), keyEquivalent: "h"))
+        menu.addItem(NSMenuItem(title: "Bottom Left", action: #selector(moveClockToZero(_:)), keyEquivalent: "c"))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Toggle seconds", action: #selector(toggleSeconds(_:)), keyEquivalent: "t"))
         menu.addItem(NSMenuItem.separator())
