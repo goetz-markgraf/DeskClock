@@ -11,8 +11,6 @@
 		D86C7838227C03E9003E649A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86C7837227C03E9003E649A /* AppDelegate.swift */; };
 		D86C783A227C03E9003E649A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86C7839227C03E9003E649A /* ViewController.swift */; };
 		D86C783F227C03EA003E649A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86C783D227C03EA003E649A /* Main.storyboard */; };
-		D86C784B227C03EA003E649A /* DeskClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86C784A227C03EA003E649A /* DeskClockTests.swift */; };
-		D86C7856227C03EA003E649A /* DeskClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86C7855227C03EA003E649A /* DeskClockUITests.swift */; };
 		D8AE7FC722805AE300D09F99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AE7FC622805AE300D09F99 /* Assets.xcassets */; };
 		D8BA30CF227E160F0033ECE6 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA30CE227E160F0033ECE6 /* ClockView.swift */; };
 /* End PBXBuildFile section */
@@ -43,11 +41,7 @@
 		D86C7840227C03EA003E649A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D86C7841227C03EA003E649A /* DeskClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeskClock.entitlements; sourceTree = "<group>"; };
 		D86C7846227C03EA003E649A /* DeskClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeskClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D86C784A227C03EA003E649A /* DeskClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskClockTests.swift; sourceTree = "<group>"; };
-		D86C784C227C03EA003E649A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D86C7851227C03EA003E649A /* DeskClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeskClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D86C7855227C03EA003E649A /* DeskClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskClockUITests.swift; sourceTree = "<group>"; };
-		D86C7857227C03EA003E649A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8AE7FC622805AE300D09F99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8BA30CE227E160F0033ECE6 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				D86C7836227C03E9003E649A /* DeskClock */,
-				D86C7849227C03EA003E649A /* DeskClockTests */,
-				D86C7854227C03EA003E649A /* DeskClockUITests */,
 				D86C7835227C03E9003E649A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,24 +102,6 @@
 				D86C7841227C03EA003E649A /* DeskClock.entitlements */,
 			);
 			path = DeskClock;
-			sourceTree = "<group>";
-		};
-		D86C7849227C03EA003E649A /* DeskClockTests */ = {
-			isa = PBXGroup;
-			children = (
-				D86C784A227C03EA003E649A /* DeskClockTests.swift */,
-				D86C784C227C03EA003E649A /* Info.plist */,
-			);
-			path = DeskClockTests;
-			sourceTree = "<group>";
-		};
-		D86C7854227C03EA003E649A /* DeskClockUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D86C7855227C03EA003E649A /* DeskClockUITests.swift */,
-				D86C7857227C03EA003E649A /* Info.plist */,
-			);
-			path = DeskClockUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +245,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D86C784B227C03EA003E649A /* DeskClockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D86C7856227C03EA003E649A /* DeskClockUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +442,6 @@
 		D86C785E227C03EA003E649A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -491,7 +462,6 @@
 		D86C785F227C03EA003E649A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -512,7 +482,6 @@
 		D86C7861227C03EA003E649A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 63YZ3ZWKJZ;
@@ -532,7 +501,6 @@
 		D86C7862227C03EA003E649A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 63YZ3ZWKJZ;
