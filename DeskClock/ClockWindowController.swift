@@ -38,7 +38,7 @@ class ClockWindowController: NSWindowController
         }
             
         do {
-            if let frame = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? NSRect {
+            if let frame = try NSKeyedUnarchiver.unarchivedObject(ofClass: NSValue.self, from: data) as? NSRect {
                 
                 window?.setFrame(frame, display: true)
             }
